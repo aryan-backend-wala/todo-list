@@ -7,7 +7,7 @@ export default function TodoList({todos}) {
       {
         todos.map((todo, i) => (
           <TodoCard key={i}>
-            <p>{todo}</p>
+            <p>{todo.todo}</p>
           </TodoCard>
         ))
       }
