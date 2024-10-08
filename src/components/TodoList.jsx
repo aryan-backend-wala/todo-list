@@ -1,17 +1,16 @@
-export default function TodoList() {
-  const todos = [
-    'Go to the gym',
-    'Eat the lunch at school',
-    'Walk the dog in the evening'
-  ]
+import TodoCard from "./TodoCard"
 
+export default function TodoList({todos}) {
+  
   return (
     <ul className="main">
-      {todos.map((todo, i) => (
-        <li key={i}>
-          {todo}
-        </li>
-      ))}
+      {
+        todos.map((todo, i) => (
+          <TodoCard key={i}>
+            <p>{todo}</p>
+          </TodoCard>
+        ))
+      }
     </ul>
   )
 }

@@ -2,12 +2,17 @@ import TodoInput from "./components/TodoInput"
 import TodoList from "./components/TodoList"
 
 function App() {
+  const todos = [
+    'Go to the gym',
+    'Eat the lunch at school',
+    'Walk the dog in the evening'
+  ]
 
   return (
-    <main>
+    <>
       <TodoInput />
-      <TodoList />
-    </main>
+      <TodoList todos={todos} />
+    </>
   )
 }
 
